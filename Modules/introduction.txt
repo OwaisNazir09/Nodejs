@@ -1,0 +1,12 @@
+module is a reusable piece of code that encapsulates related functionalities and can be included in other parts of your application. Node.js follows the CommonJS module system, where each file is treated as a separate module.
+
+Types of Modules in Node.js
+Core Modules: These are built-in modules provided by Node.js, such as fs, http, path, etc.
+Local Modules: These are custom modules created by you within your project.
+Third-party Modules: These are modules available via npm (Node Package Manager) that can be installed and used in your project.
+
+
+Summary
+Core Modules: Provided by Node.js, no installation required.
+Local Modules: Custom modules created within your project.
+Third-party Modules: Installed using npm and used in your project
