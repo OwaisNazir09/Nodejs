@@ -11,7 +11,12 @@ Welcome to my Node.js learning repository! This project is dedicated to document
 3.Modules
 <br>
 
+4.file handling
+<br>
 
+5.building http server
+
+<br>
   
 <h2>Goals</h2>
 Understand Core Concepts: Grasp the fundamental concepts of Node.js, including non-blocking I/O, the event loop, and JavaScript runtime.
