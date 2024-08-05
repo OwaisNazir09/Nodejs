@@ -1,0 +1,19 @@
+the version of a package is like -> "express": "^4.19.2"
+this is mainly in peices 
+
+->minor update i.e last no ====2
+this means there are some minor changes done in new package release 
+if you upadte them or not its all up to you as it will not make any big trouble in feature
+
+>Recommnended upadate that is seccond bit--> 18 
+it means there is an upadate releated to new feature or critical bug fix 
+most of the timme its Recommnended
+
+>Major update that is bit 1----->4
+this means its a major release, well it conatins new feature, critical bug fixes etc 
+if yoou have an app previously builded then thay may be or may not be run in new version 
+its alsoo calleed breaking release
+
+
+^ means that update 3 and 2 bit automatcally but not ist bit
+~meeans dont update ist and 2nd bit but automatcally you can upadate last bit(minor update)
