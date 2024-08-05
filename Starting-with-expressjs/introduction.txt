@@ -1,0 +1,11 @@
+Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile 
+applications. It is often referred to as the de facto standard server framework for Node.js.
+
+Key Features of Express.js
+        Lightweight and Minimal: Focuses on the core features needed for building web applications and APIs.
+        Middleware Support: Allows you to define a series of middleware functions to handle requests. Middleware can be used for logging,
+         authentication, data parsing, etc.
+        Routing: Provides a robust routing mechanism to manage different routes of your application.
+        Template Engines: Supports various template engines like Pug, EJS, and Handlebars to render dynamic content.
+        Error Handling: Simplifies the process of managing errors within an application.
+        Extensibility: Easily extendable with various plugins and libraries.
