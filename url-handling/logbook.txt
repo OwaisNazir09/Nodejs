@@ -1,0 +1,15 @@
+/
+/favicon.ico
+/
+/favicon.ico
+/jome
+/favicon.ico
+/jome
+/favicon.ico
+/jome
+/favicon.ico
+/jome
+/favicon.ico
+Method: GET, URL: /
+Method: GET, URL: /favicon.ico
+[object Object][object Object]//favicon.ico//favicon.icoundefinedundefinedundefinedundefined
