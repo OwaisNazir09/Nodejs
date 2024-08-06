@@ -1,0 +1,29 @@
+HTTP headers and status codes are essential components of HTTP (Hypertext Transfer Protocol) that facilitate communication between clients and servers. Here's an overview of each:
+
+### HTTP Headers
+
+HTTP headers provide additional information about the request or response. They are included in the header section of HTTP messages.
+
+#### Common Request Headers:
+- **`Accept`**: Specifies the media types that the client is willing to receive.
+  - Example: `Accept: text/html, application/xhtml+xml`
+- **`Authorization`**: Contains credentials for authenticating the client with the server.
+  - Example: `Authorization: Basic dXNlcjpwYXNz`
+- **`User-Agent`**: Identifies the client software making the request.
+  - Example: `User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36`
+- **`Host`**: Specifies the domain name of the server and the port number.
+  - Example: `Host: www.example.com`
+- **`Cookie`**: Sends cookies from the client to the server.
+  - Example: `Cookie: sessionId=abc123`
+
+#### Common Response Headers:
+- **`Content-Type`**: Indicates the media type of the response body.
+  - Example: `Content-Type: application/json`
+- **`Content-Length`**: Specifies the length of the response body in bytes.
+  - Example: `Content-Length: 1234`
+- **`Cache-Control`**: Directives for caching mechanisms in both requests and responses.
+  - Example: `Cache-Control: no-cache`
+- **`Location`**: Used in redirection or when a new resource has been created.
+  - Example: `Location: http://www.example.com/new-resource`
+- **`Set-Cookie`**: Sets a cookie from the server to the client.
+  - Example: `Set-Cookie: sessionId=abc123; HttpOnly`
