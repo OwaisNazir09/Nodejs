@@ -1,0 +1,145 @@
+Certainly! Here are the various methods provided by MongoDB, grouped by category, without implementation code.
+
+### Database Methods
+
+- **createCollection(name, options)**: Creates a collection with the specified name and options.
+- **getCollection(name)**: Returns a collection with the specified name.
+- **getCollectionNames()**: Returns an array of all collection names in the database.
+- **dropDatabase()**: Drops the current database.
+- **stats()**: Provides statistics about the database.
+
+### Collection Methods
+
+- **insertOne(document, options)**: Inserts a single document into the collection.
+- **insertMany(documents, options)**: Inserts multiple documents into the collection.
+- **find(query, projection)**: Finds documents in the collection that match the query.
+- **findOne(query, projection)**: Finds a single document that matches the query.
+- **updateOne(filter, update, options)**: Updates a single document that matches the filter.
+- **updateMany(filter, update, options)**: Updates multiple documents that match the filter.
+- **replaceOne(filter, replacement, options)**: Replaces a single document that matches the filter with a new document.
+- **deleteOne(filter, options)**: Deletes a single document that matches the filter.
+- **deleteMany(filter, options)**: Deletes multiple documents that match the filter.
+- **bulkWrite(operations, options)**: Performs multiple write operations with control over order of execution.
+- **countDocuments(query, options)**: Counts the number of documents matching the query.
+- **estimatedDocumentCount(options)**: Estimates the number of documents in a collection.
+- **aggregate(pipeline, options)**: Performs aggregation operations on the documents in the collection.
+- **distinct(field, query, options)**: Finds the distinct values for a specified field across a single collection or view.
+- **createIndex(keys, options)**: Creates an index on the collection.
+- **createIndexes(indexSpecs, options)**: Creates multiple indexes on the collection.
+- **dropIndex(index, options)**: Drops an index from the collection.
+- **dropIndexes(options)**: Drops all indexes from the collection.
+- **indexes()**: Returns an array of all the indexes on the collection.
+- **findOneAndDelete(filter, options)**: Finds a single document and deletes it.
+- **findOneAndReplace(filter, replacement, options)**: Finds a single document and replaces it.
+- **findOneAndUpdate(filter, update, options)**: Finds a single document and updates it.
+- **renameCollection(newName, options)**: Renames the collection.
+- **stats(options)**: Returns statistics about the collection.
+
+### Index Methods
+
+- **createIndex(keys, options)**: Creates an index on the specified field(s) of a collection.
+- **createIndexes(indexSpecs, options)**: Creates multiple indexes on the collection.
+- **dropIndex(index, options)**: Drops a single index on the collection.
+- **dropIndexes(options)**: Drops all indexes on the collection.
+- **listIndexes(options)**: Lists all indexes on the collection.
+
+### Administrative Methods
+
+- **command(command, options)**: Runs a command against the database.
+- **dropDatabase(options)**: Drops the current database.
+- **listCollections(filter, options)**: Lists all collections in the database.
+- **stats(options)**: Provides statistics about the database.
+
+### GridFS Methods
+
+- **openUploadStream(filename, options)**: Opens a stream to upload a file to GridFS.
+- **openDownloadStream(fileId, options)**: Opens a stream to download a file from GridFS.
+- **find(query, options)**: Finds files in GridFS that match the query.
+- **delete(fileId, options)**: Deletes a file from GridFS by its ID.
+
+These methods provide a wide range of functionalities to manage and manipulate data within MongoDB databases and collections.
+
+
+
+
+MongoDB provides various operators for querying, updating, and manipulating data. These operators can be categorized into several groups:
+
+### Query Operators
+
+- **Comparison**
+  - `$eq`: Matches values that are equal to a specified value.
+  - `$ne`: Matches all values that are not equal to a specified value.
+  - `$gt`: Matches values that are greater than a specified value.
+  - `$gte`: Matches values that are greater than or equal to a specified value.
+  - `$lt`: Matches values that are less than a specified value.
+  - `$lte`: Matches values that are less than or equal to a specified value.
+  - `$in`: Matches any of the values specified in an array.
+  - `$nin`: Matches none of the values specified in an array.
+
+- **Logical**
+  - `$and`: Joins query clauses with a logical AND returns all documents that match the conditions of both clauses.
+  - `$or`: Joins query clauses with a logical OR returns all documents that match the conditions of either clause.
+  - `$not`: Inverts the effect of a query expression and returns documents that do not match the query expression.
+  - `$nor`: Joins query clauses with a logical NOR returns all documents that fail to match both clauses.
+
+- **Element**
+  - `$exists`: Matches documents that have the specified field.
+  - `$type`: Selects documents if a field is of the specified type.
+
+- **Evaluation**
+  - `$regex`: Selects documents where values match a specified regular expression.
+  - `$expr`: Allows the use of aggregation expressions within the query language.
+  - `$jsonSchema`: Matches documents that satisfy a specified JSON schema.
+  - `$mod`: Performs a modulo operation on the value of a field and selects documents with a specified result.
+  - `$text`: Performs text search.
+  - `$where`: Matches documents that satisfy a JavaScript expression.
+
+- **Array**
+  - `$all`: Matches arrays that contain all elements specified in the query.
+  - `$elemMatch`: Selects documents if an element in the array field matches all the specified `$elemMatch` conditions.
+  - `$size`: Selects documents if the array field is of the specified size.
+
+- **Bitwise**
+  - `$bitsAllClear`: Matches numeric or binary data where all specified bit positions are clear.
+  - `$bitsAllSet`: Matches numeric or binary data where all specified bit positions are set.
+  - `$bitsAnyClear`: Matches numeric or binary data where any of the specified bit positions are clear.
+  - `$bitsAnySet`: Matches numeric or binary data where any of the specified bit positions are set.
+
+### Update Operators
+
+- **Field**
+  - `$inc`: Increments the value of the field by the specified amount.
+  - `$mul`: Multiplies the value of the field by the specified amount.
+  - `$rename`: Renames a field.
+  - `$setOnInsert`: Sets the value of a field if an update results in an insert of a document.
+  - `$set`: Sets the value of a field in a document.
+  - `$unset`: Removes the specified field from a document.
+  - `$min`: Only updates the field if the specified value is less than the existing field value.
+  - `$max`: Only updates the field if the specified value is greater than the existing field value.
+  - `$currentDate`: Sets the value of a field to the current date.
+
+- **Array**
+  - `$addToSet`: Adds elements to an array only if they do not already exist in the set.
+  - `$pop`: Removes the first or last element of an array.
+  - `$pullAll`: Removes all instances of the specified values from an existing array.
+  - `$pull`: Removes all array elements that match a specified query.
+  - `$push`: Adds an element to an array.
+  - `$each`: Modifies the `$push` and `$addToSet` operators to append multiple items for array updates.
+  - `$slice`: Limits the number of array elements during a `$push` operation.
+  - `$sort`: Orders the elements of an array.
+  - `$position`: Specifies the position in the array to add elements.
+
+- **Bitwise**
+  - `$bit`: Performs bitwise AND, OR, and XOR operations on the specified field.
+
+### Aggregation Pipeline Operators
+
+- **$match**: Filters the documents to pass only the documents that match the specified condition(s).
+- **$project**: Passes along the documents with the requested fields to the next stage in the pipeline.
+- **$group**: Groups input documents by a specified identifier expression and applies the accumulator expression(s).
+- **$sort**: Sorts all input documents and returns them to the next stage in the pipeline.
+- **$limit**: Limits the number of documents passed to the next stage in the pipeline.
+- **$skip**: Skips the first n documents and passes the remaining documents to the next stage in the pipeline.
+- **$unwind**: Deconstructs an array field from the input documents to output a document for each element.
+- **$lookup**: Performs a left outer join to an unsharded collection in the same database to filter in documents from the "joined" collection for processing.
+- **$out**: Writes the resulting documents of the aggregation pipeline to a collection.
